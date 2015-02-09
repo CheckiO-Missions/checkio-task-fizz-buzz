@@ -74,6 +74,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             else {
                 $content.find('.call').html('Pass: checkio(' + JSON.stringify(checkioInput) + ')');
                 $content.find('.answer').remove();
+                $content.find(".treehouse").remove();
             }
             //Dont change the code before it
 

@@ -58,6 +58,8 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             var result = data.ext["result"];
             var result_addon = data.ext["result_addon"];
 
+            console.log(userResult);
+
             if (userResult === null) {
                 $content.find('.output').html('Your function return None, maybe you are trying "print" results instead "return" them.');
             }

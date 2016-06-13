@@ -1,11 +1,11 @@
 <body data-author="bryukh">
 <div class="question-answer">
     <div class="question">
-        Ich habe keine Ahnung wo ich mit Lösung anfangen soll.
+        I have no idea how to start solving this mission
     </div>
     <div class="answer">
-        Um verschiedene Bedingungen zu prüfen benutze
-        <a href="http://docs.python.org/3/tutorial/controlflow.html#if-statements">if-else</a> Ausdrücke.
+        To check various cases, use
+        <a href="http://docs.python.org/3/tutorial/controlflow.html#if-statements">if-else</a> statements.
         <pre class="brush: python">
 if condition:
     do_something()
@@ -19,24 +19,22 @@ else:
 </div>
 <div class="question-answer">
     <div class="question">
-        Ich brauche Hilfe um weiter zu kommen.
+        I need some help to proceed with the mission
     </div>
     <div class="answer">
-        Die Teilbarkeit einer Zahl kannst du mit dem
         You can check if a number is divisible with
-        <a href="http://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-long-complex">% Operator</a>
-        (Modulo-Operator) prüfen.
-        Schau mal: "if X % n == 0:" dann ist x durch n teilbar.
-        Noch besser wäre es so: "if not X % n:"
+        <a href="http://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-long-complex">the % operator</a>.
+        Just do "if X % n == 0:" then X is divisible by n.
+        That said, it's more pythonic to write "if not X % n:"
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Ich hab's fast. Bitte hilf mir!
+        I am gone half way through. Need help!
     </div>
     <div class="answer">
-        Wenn du eine Zahl in einen String umwandeln willst, dann mache das mit der
-        <a href="http://docs.python.org/3/tutorial/introduction.html#strings">String Konvertierung</a>.
+        If you need the string representation of a number, then use <a
+            href="http://docs.python.org/3/tutorial/introduction.html#strings">string conversion</a>.
         <pre class="brush: python">
 str(53) == "53"
         </pre>
@@ -45,11 +43,10 @@ str(53) == "53"
 </div>
 <div class="question-answer">
     <div class="question">
-        Ich hänge fest. Gib mir einen Tip.
+        I am stuck. I need a small hint.
     </div>
     <div class="answer">
-        Du solltest statt der spezifischen die generelle Teilbarkeit prüfen.<br>
-        Ist die Zahl, zum Beispiel, durch 15 teilbar?
+        You should check divisibility from specific to general. For example, is it divisible by 15:
 <pre class="brush: python">
 if not number % 15:
     return "FizzBuzz"
@@ -62,10 +59,10 @@ else if not number % 5:
 </div>
 <div class="question-answer">
     <div class="question">
-        Ich habe alles versucht. Nichts geht mehr. SOS!!!
+        I tried all I could. Nothing works. SOS
     </div>
     <div class="answer">
-        Vergiss nicht: Deine Funktion soll das Ergenis nicht ausdrucken sondern zurückgeben!
+        Don't forget - your function should return the result, not print it.
 <pre class="brush: python">
 def checkio(number):
     ...

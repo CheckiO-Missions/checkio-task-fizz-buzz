@@ -26,11 +26,17 @@
     <p>
         <strong>Примеры:</strong>
     </p>
-    <pre class="brush: python">
+    <pre class="brush: python">{% if interpreter.slug == "js-node" %}
+fizzBuzz(15) == "Fizz Buzz"
+fizzBuzz(6) == "Fizz"
+fizzBuzz(5) == "Buzz"
+fizzBuzz(7) == "7"
+{% else %}
 checkio(15) == "Fizz Buzz"
 checkio(6) == "Fizz"
 checkio(5) == "Buzz"
 checkio(7) == "7"
+{% endif %}
     </pre>
 </div>
 

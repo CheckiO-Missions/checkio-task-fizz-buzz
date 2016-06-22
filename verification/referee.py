@@ -38,6 +38,10 @@ api.add_listener(
     ON_CONNECT,
     CheckiOReferee(
         tests=TESTS,
+        function_name={
+            "python": "checkio",
+            "js": "fizzBuzz"
+        }
         #cover_code={
         #    'python-27': cover_codes.unwrap_args,  # or None
         #    'python-3': cover_codes.unwrap_args

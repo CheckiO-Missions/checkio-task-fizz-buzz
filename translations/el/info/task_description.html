@@ -1,5 +1,4 @@
-﻿<img class="for_info_only" title="juggler" src="{{MEDIA}}calculator.png" alt="juggler" width="300px"
-        style="float: left; margin-top: -5px; "/>
+﻿<img class="for_info_only half" title="juggler" src="{{MEDIA}}calculator.png" alt="juggler" style="float: left" />
 
 <p>
     Το "Fizz buzz" είναι ένα παιχνίδι λέξεων που θα χρησιμοποιήσουμε για να διδάξουμε διαίρεση στα ρομπότ. 
@@ -26,11 +25,17 @@
     <p>
         <strong>Παράδειγμα:</strong>
     </p>
-    <pre class="brush: python">
+    <pre class="brush: python">{% if interpreter.slug == "js-node" %}
+fizzBuzz(15) == "Fizz Buzz"
+fizzBuzz(6) == "Fizz"
+fizzBuzz(5) == "Buzz"
+fizzBuzz(7) == "7"
+{% else %}
 checkio(15) == "Fizz Buzz"
 checkio(6) == "Fizz"
 checkio(5) == "Buzz"
 checkio(7) == "7"
+{% endif %}
     </pre>
 </div>
 

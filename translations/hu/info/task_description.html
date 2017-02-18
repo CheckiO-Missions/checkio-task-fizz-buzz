@@ -1,5 +1,4 @@
-<img class="for_info_only" title="juggler" src="{{MEDIA}}calculator.png" alt="juggler" width="300px"
-        style="float: left; margin-top: -5px; "/>
+<img class="for_info_only half" title="juggler" src="{{MEDIA}}calculator.png" alt="juggler" style="float: left" />
 
 <p>
     A „Fizz buzz” egy szójáték, melynek segítségével megfogjuk tanítani robotjainkat az osztás 
@@ -16,20 +15,6 @@
 </p>
 
 <p>
-    <strong>Megjegyzés: </strong> Ezt a feladatot könnyen meg lehet oldani a következő 
-    súgó segítségével:
-    {% if "python 2" in interpreter|lower %}
-    <a href="http://docs.python.org/2/tutorial/controlflow.html#if-statements">if-else</a>,
-    <a href="http://docs.python.org/2/library/stdtypes.html#numeric-types-int-float-long-complex">% operátor</a> és
-    <a href="http://docs.python.org/2/tutorial/introduction.html#strings">szövegfeldolgozás</a>.
-    {% else %}
-    <a href="http://docs.python.org/3/tutorial/controlflow.html#if-statements">if-else</a>,
-    <a href="http://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-long-complex">% operátor</a> és
-    <a href="http://docs.python.org/3/tutorial/introduction.html#strings">szövegfeldolgozás</a>.
-    {% endif %}
-</p>
-
-<p>
     <strong>Bemeneti adatok: </strong> egy egész szám (int).
 </p>
 
@@ -42,11 +27,17 @@
     <p>
         <strong>Példák:</strong>
     </p>
-    <pre class="brush: python">
+    <pre class="brush: python">{% if interpreter.slug == "js-node" %}
+fizzBuzz(15) == "Fizz Buzz"
+fizzBuzz(6) == "Fizz"
+fizzBuzz(5) == "Buzz"
+fizzBuzz(7) == "7"
+{% else %}
 checkio(15) == "Fizz Buzz"
 checkio(6) == "Fizz"
 checkio(5) == "Buzz"
 checkio(7) == "7"
+{% endif %}
     </pre>
 </div>
 

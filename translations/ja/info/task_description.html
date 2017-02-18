@@ -1,4 +1,5 @@
-﻿<img class="for_info_only half" title="juggler" src="{{MEDIA}}calculator.png" alt="juggler" style="float: left" />
+﻿<img class="for_info_only" title="juggler" src="{{MEDIA}}calculator.png" alt="juggler" width="300px"
+        style="float: left; margin-top: -5px; "/>
 
 <p>
 	"Fizz buzz"はロボットに割り算について教えるために使う言葉ゲームです。
@@ -13,6 +14,18 @@
     <strong>その数</strong> それ以外の場合は文字列に変換<br>
 </p>
 
+<p>
+    <strong>ヒント(Tips): </strong> あなたは以下を使って簡単に解くことができます:
+    {% if "python 2" in interpreter|lower %}
+    <a href="http://docs.python.jp/2/tutorial/controlflow.html#if-statements">if-else</a>,
+    <a href="http://docs.python.jp/2/library/stdtypes.html#numeric-types-int-float-long-complex">% 演算子 </a>,
+    <a href="http://docs.python.jp/2/tutorial/introduction.html#strings">文字列変換</a>。
+    {% else %}
+    <a href="http://docs.python.jp/3/tutorial/controlflow.html#if-statements">if-else</a>,
+    <a href="http://docs.python.jp/3/library/stdtypes.html#numeric-types-int-float-long-complex">% 演算子 </a>,
+    <a href="http://docs.python.jp/3/tutorial/introduction.html#strings">文字列変換</a>。
+    {% endif %}
+</p>
 
 <p>
     <strong>入力: </strong> ある数、整数
@@ -27,17 +40,11 @@
     <p>
         <strong>例:</strong>
     </p>
-    <pre class="brush: python">{% if interpreter.slug == "js-node" %}
-fizzBuzz(15) == "Fizz Buzz"
-fizzBuzz(6) == "Fizz"
-fizzBuzz(5) == "Buzz"
-fizzBuzz(7) == "7"
-{% else %}
+    <pre class="brush: python">
 checkio(15) == "Fizz Buzz"
 checkio(6) == "Fizz"
 checkio(5) == "Buzz"
 checkio(7) == "7"
-{% endif %}
     </pre>
 </div>
 

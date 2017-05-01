@@ -1,0 +1,51 @@
+<img class="for_info_only half" title="juggler" src="{{MEDIA}}calculator.png" alt="juggler" style="float: left" />
+
+<p>
+	"Fizz buzz" jest grą słowną, którą wykorzystamy, żeby nauczyć roboty dzielenia. Nauczmy komputer.
+</p>
+
+<p>
+	Napisz funkcję, która dostanie dodatnią liczbę naturalną i zwróci:<br>
+	<strong>"Fizz Buzz"</strong> jeżeli liczba dzieli się przez 3 i przez 5;<br>
+	<strong>"Fizz"</strong> jeżeli liczba dzieli się przez 3;<br>
+	<strong>"Buzz"</strong> jeżeli liczba dzielisię przez 5;<br>
+	<strong>Liczbę</strong> jako napis dla pozostałych przypadków.<br>
+</p>
+
+<p>
+	<strong>Wejście: </strong> Liczba naturalna (integer).
+</p>
+
+<p>
+	<strong>Wyjście: </strong> Odpowiedź jako napis.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+		<strong>Przykład:</strong>
+    </p>
+    <pre class="brush: python">{% if interpreter.slug == "js-node" %}
+fizzBuzz(15) == "Fizz Buzz"
+fizzBuzz(6) == "Fizz"
+fizzBuzz(5) == "Buzz"
+fizzBuzz(7) == "7"
+{% else %}
+checkio(15) == "Fizz Buzz"
+checkio(6) == "Fizz"
+checkio(5) == "Buzz"
+checkio(7) == "7"
+{% endif %}
+    </pre>
+</div>
+
+<p class="for_info_only">
+	<strong>Korzyści: </strong>
+	Nauczysz się jak pisać proste funkcje i używać instrukcji if-else.
+</p>
+
+
+<p>
+	<strong>Założenia:</strong>
+    0 &lt; liczba &le; 1000
+</p>

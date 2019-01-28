@@ -7,6 +7,9 @@ function fizzBuzz(data) {
 var assert = require('assert');
 
 if (!global.is_checking) {
+    console.log('Example:')
+    console.log(fizzBuzz(15))
+    
     assert.equal(fizzBuzz(15), "Fizz Buzz", "15 is divisible by 3 and 5");
     assert.equal(fizzBuzz(6), "Fizz", "6 is divisible by 3");
     assert.equal(fizzBuzz(5), "Buzz", "5 is divisible by 5");

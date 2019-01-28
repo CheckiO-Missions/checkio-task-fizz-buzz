@@ -1,7 +1,7 @@
 "use strict";
 
 function fizzBuzz(data) {
-    return data;
+    return 'Fizz Buzz';
 }
 
 var assert = require('assert');

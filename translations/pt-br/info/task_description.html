@@ -25,18 +25,7 @@
     <p>
         <strong>Exemplos:</strong>
     </p>
-    <pre class="brush: python">{% if interpreter.slug == "js-node" %}
-fizzBuzz(15) == "Fizz Buzz"
-fizzBuzz(6) == "Fizz"
-fizzBuzz(5) == "Buzz"
-fizzBuzz(7) == "7"
-{% else %}
-checkio(15) == "Fizz Buzz"
-checkio(6) == "Fizz"
-checkio(5) == "Buzz"
-checkio(7) == "7"
-{% endif %}
-    </pre>
+    <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 <p class="for_info_only">

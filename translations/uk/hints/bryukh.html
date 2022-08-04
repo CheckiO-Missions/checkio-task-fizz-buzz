@@ -1,0 +1,92 @@
+<body data-author="bryukh">
+<div class="question-answer">
+    <div class="question">
+        Я не маю уявлення, як розв'язувати це завдання.
+    </div>
+    <div class="answer">
+        Для перевірки різних умов використовуй оператор
+        <a href="http://docs.python.org/3/tutorial/controlflow.html#if-statements">if-else</a>.
+        <pre class="brush: python">
+if condition: # один if 
+    do_something()
+elif another_condition: # 0 або будь-яка кількість 'elif'
+    do_something2()
+else: # 0 або 1 'else'
+    do_something3() 
+</pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Мені потрібна допомога, щоб продовжити з цією місією.
+    </div>
+    <div class="answer">
+        Ти можеш перевірити остачу від ділення з
+        <a href="http://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-long-complex">оператором %</a>.
+        Просто напиши "if X % n == 0:" - якщо True, це значить, що X ділиться на n без остачі.
+        Вважається, більш pythonic написати "not X % n:"
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Я на середині шляху. Потрібна допомога!
+    </div>
+    <div class="answer">
+        Якщо тобі потрібне рядкове представлення числа, використай <a
+            href="http://docs.python.org/3/tutorial/introduction.html#strings">рядкове перетворення</a>:.
+        <pre class="brush: python">
+str(53) == "53"
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+       Я застряг. Потрібна маленька підказка.
+    </div>
+    <div class="answer">
+        Подільність слід перевіряти від вужчих випадків до більш загальних.
+        В нашому випадку, починаємо з перевірки подільності на 15:
+<pre class="brush: python">
+if not number % 15:
+    return "FizzBuzz"
+elif not number % 5:
+    ...
+</pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        У перепробував все. Досі не працює. SOS
+    </div>
+    <div class="answer">
+        Не забудь - твоя функція повинна повертати результат, а не друкувати його.
+        <pre class="brush: python">
+def checkio(number):
+    ...
+    ...
+    return str(number)
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Мені потрібно побачити остаточний код.
+    </div>
+    <div class="answer">
+        Ось він:
+        <pre class="brush: python">
+def checkio(number):
+    
+    if not number % 15:
+        return "FizzBuzz"
+    elif not number % 5:
+        return "Buzz"
+    elif not number % 3:
+        return "Fizz"
+        
+    return str(number)
+        </pre>
+    </div>
+</div>
+
+</body>

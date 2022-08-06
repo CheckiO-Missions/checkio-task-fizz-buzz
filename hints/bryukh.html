@@ -52,9 +52,7 @@ if not number % 15:
     return "FizzBuzz"
 elif not number % 5:
     ...
-    ...
 </pre>
-
     </div>
 </div>
 <div class="question-answer">
@@ -63,15 +61,35 @@ elif not number % 5:
     </div>
     <div class="answer">
         Don't forget - your function should return the result, not print it.
-<pre class="brush: python">
+        And this result for all other cases should be input number as a string.
+        <pre class="brush: python">
 def checkio(number):
     ...
-    ...
     return str(number)
-</pre>
-
+    
+checkio(7) # output "7" since 7 in not divisible by 15, 5, 3
+        </pre>
     </div>
 </div>
-
+<div class="question-answer">
+    <div class="question">
+        I need to see the final code.
+    </div>
+    <div class="answer">
+        Here it is:
+        <pre class="brush: python">
+def checkio(number):
+    
+    if not number % 15:
+        return "FizzBuzz"
+    elif not number % 5:
+        return "Buzz"
+    elif not number % 3:
+        return "Fizz"
+        
+    return str(number)
+        </pre>
+    </div>
+</div>
 
 </body>

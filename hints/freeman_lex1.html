@@ -1,0 +1,186 @@
+<body data-author="freeman_lex" data-difficulty="normal, advanced">
+<div class="question-answer">
+    <div class="question">
+        <i>I have no idea how to start solving this mission.</i>
+    </div>
+    <div class="answer">
+        <p>
+            💡 This is a simple mission with a simple idea of solving: to create a multiple condition checking and return respective value to each case.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Ok, what should I start from?</i>
+    </div>
+    <div class="answer">
+        <p>
+            First of all, read about <a target="_blank" href="http://docs.python.org/3/tutorial/controlflow.html#if-statements">if-elif-else statement</a> and use it in your code: 
+        </p>
+        <pre class="brush: python">
+if ...:
+    ...
+elif ...:
+    ...
+else:
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>
+            Ok. What to do next?
+        </i>
+    </div>
+    <div class="answer">
+        <p>
+            You can check how a number is divisible by another one with the <a target="_blank" href="http://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-long-complex">% (modulo) operator</a>.
+        </p>
+        <pre class="brush: python">
+if num % n == 0: # num is evenly divisible by n
+    ...
+elif num % n1 == 0:
+    ...
+else:
+    ...
+        </pre>
+        <p>
+            The more pythonic way is to write as:
+        </p>
+        <pre class="brush: python">
+if not num % n:
+    ...
+elif not num % n1:
+    ...
+else:
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Ok, what numbers should I use instead of <b class="code">n, n1</b>?</i>
+    </div>
+    <div class="answer">
+        <p>
+            You should check divisibility from specific to general. Since, less numbers are evenly divisible by <b class="code">15</b>, then by <b class="code">5</b> or <b class="code">3</b>,  this case is more specific, so this checking should go first. <b class="code">5</b> is not evenly divisible by <b class="code">3</b>, so the further order is not important.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>
+            I need a small hint!
+        </i>
+    </div>
+    <div class="answer">
+        <p>
+            Here is your code for now:
+        </p>
+        <pre class="brush: python">
+if not num % 15:
+    ...
+elif not num % 5:
+    ...
+elif not num % 3:
+    ...
+else:  
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>
+            How to complete conditions?
+        </i>
+    </div>
+    <div class="answer">
+        <p>
+            You need to add correct return to respective cases: strings <b class="code">"Fizz"</b>, <b class="code">"Buzz"</b> and <b class="code">"Fizz Buzz"</b>.
+        </p>
+        <p>
+            In the other case (when <b class="code">num</b> is not divisible by <b class="code">15, 5, 3</b> evenly), the function should return <b class="code">num</b> as string. If you need the string representation of a number, use <a target="_blank" href="https://www.w3schools.com/python/ref_func_str.asp">str()</a> built-in function.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>So, how my final solution should look like?</i>
+    </div>
+    <div class="answer">
+        <p>
+            Just wrap your code into function expression. 
+        </p>
+        <p>Here is the whole solution:</p>
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+
+    if not num % 15:
+        return "Fizz Buzz"
+    elif not num % 5:
+        return "Buzz"
+    elif not num % 3:
+        return "Fizz"
+    else:  
+        return str(num)
+        </pre>
+        <p>
+            By the way, if your condition cases end with <b class="code">return</b> statement, you usually do not need <b class="code">elif</b> and <b class="code">else</b> - <b class="code">if</b> is enough:
+        </p>
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+
+    if not num % 15:
+        return "Fizz Buzz"
+    if not num % 5:
+        return "Buzz"
+    if not num % 3:
+        return "Fizz"
+    return str(num)
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Show me more solutions!<br />
+        'Cause I wanna be a real 🥇 Python Ninnjaa!</i>
+    </div>
+    <div class="answer">
+        <p>Sure, grab it!</p>
+        <p>
+            The final answer is built from parts: if the string is multiplied by <b class="code">0</b>, it becomes an empty string <b class="code">""</b>.
+        </p>
+        <pre class="brush: python">
+def checkio(n: int) -> str:
+
+    return 'Fizz'*(not n%3)+' '*(not n%15)+'Buzz'*(not n%5) or str(n)
+        </pre>
+        <p>
+            In this solution division by <b class="code">15</b> is avoided, but in case <b class="code">num</b> is evenly divisible both by <b class="code">5</b> and <b class="code">3</b>, it means, that it is also evenly divisible by <b class="code">15</b>. So both strings are present in the list.
+        </p>
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+    
+    res = []
+    if not num % 3:
+        res.append('Fizz')
+    if not num % 5:
+        res.append('Buzz')
+    res = ' '.join(res) or str(num)
+
+    return res
+        </pre>
+        <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Thanks! I know and understand more now! Everything works fine!</i>
+    </div>
+    <div class="answer">
+        👍 Glad to hear it!
+    </div>
+</div>
+</body>

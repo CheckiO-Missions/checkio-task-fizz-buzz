@@ -1,0 +1,186 @@
+<body data-author="freeman_lex" data-difficulty="normal, advanced">
+<div class="question-answer">
+    <div class="question">
+        <i>Я поняття не маю, як почати вирішувати цю місію.</i>
+    </div>
+    <div class="answer">
+        <p>
+            💡 Це проста місія з простою ідеєю вирішення: створити багатоваріантну перевірку та повертати відповідне значення для кожного варіанту.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Гаразд, з чого мені слід почати?</i>
+    </div>
+    <div class="answer">
+        <p>
+            Спершу, прочитай про вираз умови <a target="_blank" href="http://docs.python.org/3/tutorial/controlflow.html#if-statements">if-elif-else </a> і використай його в своєму коді: 
+        </p>
+        <pre class="brush: python">
+if ...:
+    ...
+elif ...:
+    ...
+else:
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>
+            Добре. Що робити далі?
+        </i>
+    </div>
+    <div class="answer">
+        <p>
+            Ти можеш перевірити, як число ділиться на інше з оператором остачі <a target="_blank" href="http://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-long-complex">%</a>.
+        </p>
+        <pre class="brush: python">
+if num % n == 0: # num ділиться на n без остачі
+    ...
+elif num % n1 == 0:
+    ...
+else:
+    ...
+        </pre>
+        <p>
+            Більш рекомендований (pythonic) запис має вигляд:
+        </p>
+        <pre class="brush: python">
+if not num % n:
+    ...
+elif not num % n1:
+    ...
+else:
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>А які числа я маю використати замість <b class="code">n, n1</b>?</i>
+    </div>
+    <div class="answer">
+        <p>
+            Ти маєш перевіряти подільність від більш конкретних випадків до загальних. Оскільки, менше чисел діляться без остачі на <b class="code">15</b>, ніж на <b class="code">5</b> чи <b class="code">3</b>,  цей випадок більш конкретний, тож його перевірку слід робити першою. <b class="code">5</b> не ділиться без остачі на <b class="code">3</b>, тож подальший порядок перевірок не важливий.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>
+            Мені потрібна маленька підказка!
+        </i>
+    </div>
+    <div class="answer">
+        <p>
+            Ось твій код на цей момент:
+        </p>
+        <pre class="brush: python">
+if not num % 15:
+    ...
+elif not num % 5:
+    ...
+elif not num % 3:
+    ...
+else:  
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>
+            Як мені завершити умови?
+        </i>
+    </div>
+    <div class="answer">
+        <p>
+            Тобі слід додати повернення правильної відповіді для кожного випадку: рядки <b class="code">"Fizz"</b>, <b class="code">"Buzz"</b> і <b class="code">"Fizz Buzz"</b>.
+        </p>
+        <p>
+            В іншому випадку(коли <b class="code">num</b> НЕ ділиться без остачі на <b class="code">15, 5, 3</b>), функція повинна повернути <b class="code">num</b> як рядок. Якщо тобі потрібне рядкове представлення числа, використай вбудовану функцію <a target="_blank" href="https://www.w3schools.com/python/ref_func_str.asp">str()</a>.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Отже, як повинно виглядати моє остаточне рішення?</i>
+    </div>
+    <div class="answer">
+        <p>
+            Просто обгорни свій код у вираз функції. 
+        </p>
+        <p>Ось повний розв'язок:</p>
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+
+    if not num % 15:
+        return "Fizz Buzz"
+    elif not num % 5:
+        return "Buzz"
+    elif not num % 3:
+        return "Fizz"
+    else:  
+        return str(num)
+        </pre>
+        <p>
+            До речі, якщо твої варіанти умови завершуються виразом <b class="code">return</b>, тобі зазвичай не потрібні <b class="code">elif</b> та <b class="code">else</b> - достатньо <b class="code">if</b>:
+        </p>
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+
+    if not num % 15:
+        return "Fizz Buzz"
+    if not num % 5:
+        return "Buzz"
+    if not num % 3:
+        return "Fizz"
+    return str(num)
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Покажи мені більше розв'язків!<br />
+        Адже я хочу стати справжнім 🥇 Python Ніндзею!</i>
+    </div>
+    <div class="answer">
+        <p>Звісно, тримай!</p>
+        <p>
+            Остаточна відповідь побудована з частинок: якщо рядок помножити на <b class="code">0</b>, він стає порожнім рядком <b class="code">""</b>.
+        </p>
+        <pre class="brush: python">
+def checkio(n: int) -> str:
+
+    return 'Fizz'*(not n%3)+' '*(not n%15)+'Buzz'*(not n%5) or str(n)
+        </pre>
+        <p>
+            У цьому розв'язку уникнемо ділення на <b class="code">15</b>, але у випадку, якщо <b class="code">num</b> ділиться без остачі на <b class="code">5</b> і <b class="code">3</b>, це означає, що воно також ділиться без остачі на <b class="code">15</b>. Отже, обидва рядки будуть присутні в списку.
+        </p>
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+    
+    res = []
+    if not num % 3:
+        res.append('Fizz')
+    if not num % 5:
+        res.append('Buzz')
+    res = ' '.join(res) or str(num)
+
+    return res
+        </pre>
+        <p><b>Тисни "Best solutions" в меню місії і побачиш багато інших цікавих розв'язків!</b></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Дякую! Тепер я знаю і розумію більше! Все працює як слід!</i>
+    </div>
+    <div class="answer">
+        👍 Приємно це чути!
+    </div>
+</div>
+</body>

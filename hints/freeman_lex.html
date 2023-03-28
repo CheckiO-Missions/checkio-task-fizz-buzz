@@ -63,6 +63,7 @@ def checkio(num: int) -> str:
             Just add correct return to respective cases. 
         </p>
         <p>Here is the whole solution:</p>
+        <div class="spoiler">
         <pre class="brush: python">
 def checkio(num: int) -> str:
 
@@ -75,9 +76,11 @@ def checkio(num: int) -> str:
     else:  
         return str(num)
         </pre>
+        </div>
         <p>
             By the way, if your condition cases end with <b class="code">return</b> statement, you usually do not need <b class="code">elif</b> and <b class="code">else</b> - <b class="code">if</b> is enough:
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def checkio(num: int) -> str:
 
@@ -89,6 +92,7 @@ def checkio(num: int) -> str:
         return "Fizz"
     return str(num)
         </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
@@ -101,14 +105,17 @@ def checkio(num: int) -> str:
         <p>
             The final answer is built from parts: if the string is multiplied by <b class="code">0</b>, it becomes an empty string <b class="code">""</b>.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def checkio(n: int) -> str:
 
     return 'Fizz'*(not n%3)+' '*(not n%15)+'Buzz'*(not n%5) or str(n)
         </pre>
+        </div>
         <p>
             In this solution division by <b class="code">15</b> is avoided, but in case <b class="code">num</b> is evenly divisible both by <b class="code">5</b> and <b class="code">3</b>, it means, that it is also evenly divisible by <b class="code">15</b>. So both strings are present in the list.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def checkio(num: int) -> str:
     
@@ -121,6 +128,7 @@ def checkio(num: int) -> str:
 
     return res
         </pre>
+        </div>
         <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
     </div>
 </div>

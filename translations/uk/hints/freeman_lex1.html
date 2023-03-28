@@ -114,6 +114,7 @@ else:
             Просто обгорни свій код у вираз функції. 
         </p>
         <p>Ось повний розв'язок:</p>
+        <div class="spoiler">
         <pre class="brush: python">
 def checkio(num: int) -> str:
 
@@ -126,9 +127,11 @@ def checkio(num: int) -> str:
     else:  
         return str(num)
         </pre>
+        </div>
         <p>
             До речі, якщо твої варіанти умови завершуються виразом <b class="code">return</b>, тобі зазвичай не потрібні <b class="code">elif</b> та <b class="code">else</b> - достатньо <b class="code">if</b>:
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def checkio(num: int) -> str:
 
@@ -140,6 +143,7 @@ def checkio(num: int) -> str:
         return "Fizz"
     return str(num)
         </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
@@ -152,14 +156,17 @@ def checkio(num: int) -> str:
         <p>
             Остаточна відповідь побудована з частинок: якщо рядок помножити на <b class="code">0</b>, він стає порожнім рядком <b class="code">""</b>.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def checkio(n: int) -> str:
 
     return 'Fizz'*(not n%3)+' '*(not n%15)+'Buzz'*(not n%5) or str(n)
         </pre>
+        </div>
         <p>
             У цьому розв'язку уникнемо ділення на <b class="code">15</b>, але у випадку, якщо <b class="code">num</b> ділиться без остачі на <b class="code">5</b> і <b class="code">3</b>, це означає, що воно також ділиться без остачі на <b class="code">15</b>. Отже, обидва рядки будуть присутні в списку.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def checkio(num: int) -> str:
     
@@ -172,6 +179,7 @@ def checkio(num: int) -> str:
 
     return res
         </pre>
+        </div>
         <p><b>Тисни "Best solutions" в меню місії і побачиш багато інших цікавих розв'язків!</b></p>
     </div>
 </div>

@@ -1,0 +1,194 @@
+<body data-author="freeman_lex" data-difficulty="normal, advanced">
+<div class="question-answer">
+    <div class="question">
+        <p>Je n'ai aucune idée de la manière de commencer à résoudre cette mission.</p>
+    </div>
+    <div class="answer">
+        <p>
+            💡 Il s'agit d'une mission simple avec une idée de résolution simple: créer une vérification de conditions multiples et renvoyer une valeur respective pour chaque cas.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Ok, par quoi dois-je commencer?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Tout d'abord, lisez <a target="_blank" href="http://docs.python.org/3/tutorial/controlflow.html#if-statements">if-elif-else statement</a> et utilisez-le dans votre code: 
+        </p>
+        <pre class="brush: python">
+if ...:
+    ...
+elif ...:
+    ...
+else:
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ok. Que faire ensuite?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Vous pouvez vérifier la divisibilité d'un nombre par un autre à l'aide du site <a target="_blank" href="http://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-long-complex">% (modulo) operator</a>.
+        </p>
+        <pre class="brush: python">
+if num % n == 0: # num is evenly divisible by n
+    ...
+elif num % n1 == 0:
+    ...
+else:
+    ...
+        </pre>
+        <p>
+            La façon la plus pythonique est d'écrire comme:
+        </p>
+        <pre class="brush: python">
+if not num % n:
+    ...
+elif not num % n1:
+    ...
+else:
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Ok, quels nombres devrais-je utiliser à la place de <b class="code">n, n1</b>?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Vous devez vérifier la divisibilité du spécifique au général. Puisque moins de nombres sont divisibles par <b class="code">15</b>, puis par <b class="code">5</b> ou <b class="code">3</b>, ce cas est plus spécifique, donc cette vérification doit être faite en premier. <b class="code">5</b> n'est pas divisible par <b class="code">3</b>, donc l'ordre n'est pas important.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            J'ai besoin d'un petit conseil!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Voici votre code pour l'instant:
+        </p>
+        <pre class="brush: python">
+if not num % 15:
+    ...
+elif not num % 5:
+    ...
+elif not num % 3:
+    ...
+else:  
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Comment compléter les conditions?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Vous devez ajouter le retour correct aux cas respectifs: chaînes de caractères <b class="code">"Fizz"</b>, <b class="code">"Buzz"</b> et <b class="code">"Fizz Buzz"</b>.
+        </p>
+        <p>
+            Dans l'autre cas (lorsque <b class="code">num</b> n'est pas divisible par <b class="code">15, 5, 3</b> de manière égale), la fonction doit renvoyer <b class="code">num</b> sous forme de chaîne de caractères. Si vous avez besoin de la représentation en chaîne d'un nombre, utilisez la fonction intégrée <a target="_blank" href="https://www.w3schools.com/python/ref_func_str.asp">str()</a>.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Alors, à quoi devrait ressembler ma solution finale?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Il suffit d'envelopper votre code dans une expression de fonction. 
+        </p>
+        <p>Voici la solution complète:</p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+
+    if not num % 15:
+        return "Fizz Buzz"
+    elif not num % 5:
+        return "Buzz"
+    elif not num % 3:
+        return "Fizz"
+    else:  
+        return str(num)
+        </pre>
+        </div>
+        <p>
+            Par ailleurs, si vos cas de condition se terminent par l'énoncé <b class="code">return</b>, vous n'avez généralement pas besoin de <b class="code">elif</b> et <b class="code">else</b> - <b class="code">if</b> suffit:
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+
+    if not num % 15:
+        return "Fizz Buzz"
+    if not num % 5:
+        return "Buzz"
+    if not num % 3:
+        return "Fizz"
+    return str(num)
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Montrez-moi d'autres solutions!<br />
+        parce que je veux être une vraie 🥇 Python Ninnjaa!</p>
+    </div>
+    <div class="answer">
+        <p>Bien sûr, prenez-le!</p>
+        <p>
+            La réponse finale est construite à partir de parties: si la chaîne est multipliée par <b class="code">0</b>, elle devient une chaîne vide <b class="code">""</b>.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(n: int) -> str:
+
+    return 'Fizz'*(not n%3)+' '*(not n%15)+'Buzz'*(not n%5) or str(n)
+        </pre>
+        </div>
+        <p>
+            Dans cette solution, la division par <b class="code">15</b> est évitée, mais si <b class="code">num</b> est également divisible à la fois par <b class="code">5</b> et <b class="code">3</b>, cela signifie qu'il est également divisible par <b class="code">15</b>. Les deux chaînes sont donc présentes dans la liste.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+    
+    res = []
+    if not num % 3:
+        res.append('Fizz')
+    if not num % 5:
+        res.append('Buzz')
+    res = ' '.join(res) or str(num)
+
+    return res
+        </pre>
+        </div>
+        <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Merci! Je comprends mieux maintenant! Tout fonctionne bien!</p>
+    </div>
+    <div class="answer">
+        👍 Heureux de l'apprendre!
+    </div>
+</div>
+</body>

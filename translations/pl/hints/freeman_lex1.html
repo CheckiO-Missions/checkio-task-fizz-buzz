@@ -1,0 +1,194 @@
+<body data-author="freeman_lex" data-difficulty="normal, advanced">
+<div class="question-answer">
+    <div class="question">
+        <p>Nie mam pojęcia, jak zacząć rozwiązywać tę misję.</p>
+    </div>
+    <div class="answer">
+        <p>
+            jest to prosta misja z prostym pomysłem na rozwiązanie: proszę utworzyć sprawdzanie wielu warunków i zwrócić odpowiednią wartość dla każdego przypadku.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Ok, od czego powinienem zacząć?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Przede wszystkim proszę poczytać o <a target="_blank" href="http://docs.python.org/3/tutorial/controlflow.html#if-statements">if-elif-else statement</a> i używać go w swoim kodzie: 
+        </p>
+        <pre class="brush: python">
+if ...:
+    ...
+elif ...:
+    ...
+else:
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ok. Co robić dalej?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Mogą Państwo sprawdzić, jak liczba jest podzielna przez inną za pomocą <a target="_blank" href="http://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-long-complex">% (modulo) operator</a>.
+        </p>
+        <pre class="brush: python">
+if num % n == 0: # num is evenly divisible by n
+    ...
+elif num % n1 == 0:
+    ...
+else:
+    ...
+        </pre>
+        <p>
+            Bardziej pythonicznym sposobem jest zapisanie jako:
+        </p>
+        <pre class="brush: python">
+if not num % n:
+    ...
+elif not num % n1:
+    ...
+else:
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Ok, jakich liczb powinienem użyć zamiast <b class="code">n, n1</b>?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Proszę sprawdzić podzielność od konkretnej do ogólnej. Ponieważ mniej liczb jest parzyście podzielnych przez <b class="code">15</b>, a następnie przez <b class="code">5</b> lub <b class="code">3</b>, ten przypadek jest bardziej szczegółowy, więc to sprawdzenie powinno być pierwsze. <b class="code">5</b> nie jest parzyście podzielny przez <b class="code">3</b>, więc dalsza kolejność nie jest ważna.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Proszę o małą podpowiedź!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Oto pański kod:
+        </p>
+        <pre class="brush: python">
+if not num % 15:
+    ...
+elif not num % 5:
+    ...
+elif not num % 3:
+    ...
+else:  
+    ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Jak uzupełnić warunki?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Proszę dodać poprawny zwrot do odpowiednich przypadków: ciągów <b class="code">"Fizz"</b>, <b class="code">"Buzz"</b> i <b class="code">"Fizz Buzz"</b>.
+        </p>
+        <p>
+            W drugim przypadku (gdy <b class="code">num</b> nie jest podzielne przez <b class="code">15, 5, 3</b> parzyście), funkcja powinna zwrócić <b class="code">num</b> jako ciąg znaków. Jeśli potrzebują Państwo łańcuchowej reprezentacji liczby, proszę użyć wbudowanej funkcji <a target="_blank" href="https://www.w3schools.com/python/ref_func_str.asp">str()</a>.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Jak więc powinno wyglądać moje ostateczne rozwiązanie?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Proszę opakować swój kod w wyrażenie funkcyjne. 
+        </p>
+        <p>Oto całe rozwiązanie:</p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+
+    if not num % 15:
+        return "Fizz Buzz"
+    elif not num % 5:
+        return "Buzz"
+    elif not num % 3:
+        return "Fizz"
+    else:  
+        return str(num)
+        </pre>
+        </div>
+        <p>
+            Przy okazji, jeśli Państwa przypadki warunkowe kończą się instrukcją <b class="code">return</b>, zazwyczaj nie potrzebują Państwo <b class="code">elif</b> i <b class="code">else</b> - wystarczy <b class="code">if</b>:
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+
+    if not num % 15:
+        return "Fizz Buzz"
+    if not num % 5:
+        return "Buzz"
+    if not num % 3:
+        return "Fizz"
+    return str(num)
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Proszę pokazać mi więcej rozwiązań!<br />
+        bo chcę być prawdziwym 🥇 Python Ninnjaa!</p>
+    </div>
+    <div class="answer">
+        <p>Jasne, proszę łapać!</p>
+        <p>
+            Ostateczna odpowiedź jest zbudowana z części: jeśli ciąg zostanie pomnożony przez <b class="code">0</b>, stanie się pustym ciągiem <b class="code">""</b>.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(n: int) -> str:
+
+    return 'Fizz'*(not n%3)+' '*(not n%15)+'Buzz'*(not n%5) or str(n)
+        </pre>
+        </div>
+        <p>
+            W tym rozwiązaniu unikamy dzielenia przez <b class="code">15</b>, ale w przypadku, gdy <b class="code">num</b> jest podzielny zarówno przez <b class="code">5</b>, jak i <b class="code">3</b>, oznacza to, że jest on również podzielny przez <b class="code">15</b>. Tak więc oba ciągi są obecne na liście.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+    
+    res = []
+    if not num % 3:
+        res.append('Fizz')
+    if not num % 5:
+        res.append('Buzz')
+    res = ' '.join(res) or str(num)
+
+    return res
+        </pre>
+        </div>
+        <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Dzięki! Teraz wiem i rozumiem więcej! Wszystko działa poprawnie!</p>
+    </div>
+    <div class="answer">
+        miło mi to słyszeć!
+    </div>
+</div>
+</body>

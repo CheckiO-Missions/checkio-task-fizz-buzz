@@ -1,0 +1,143 @@
+<body data-author="freeman_lex" data-difficulty="easy">
+<div class="question-answer">
+    <div class="question">
+        <p>Nie mam pojęcia, jak zacząć rozwiązywać tę misję.</p>
+    </div>
+    <div class="answer">
+        <p>
+            💡 Proszę kontynuować z rozwiązaniem z podpowiedzi poprzedniej misji <a target="_blank" href="https://py.checkio.org/en/mission/just-fizz/">Just Fizz!</a>
+           <pre class="brush: python">
+def checkio(num: int) -> str: 
+
+    if not num % 3:
+        return "Fizz"
+    else:
+        return str(num)
+            </pre>
+           <p> 
+                W tej misji wystarczy dodać więcej wariantów sprawdzania warunku i odpowiedniego zwrotu.
+           </p>
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Ok, jak to zrobić?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Proszę sprawdzić podzielność od szczegółowej do ogólnej. Ponieważ mniej liczb jest parzyście podzielnych przez <b class="code">15</b>, a następnie przez <b class="code">5</b> lub <b class="code">3</b>, ten przypadek jest bardziej szczegółowy, więc to sprawdzenie powinno być pierwsze. <b class="code">5</b> nie jest parzyście podzielny przez <b class="code">3</b>, więc dalsza kolejność nie jest ważna.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Proszę o małą podpowiedź!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Proszę użyć tych samych narzędzi - operatora modulo (<b class="code">%</b>) i instrukcji <b class="code">if-elif-else</b> - aby sprawdzić różne przypadki dzielenia.
+        </p>
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+
+    if not num % 15:
+        ...
+    elif not num % 5:
+        ...
+    elif not num % 3:
+        return "Fizz"
+    else:  
+        return str(num)
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Jak powinno wyglądać moje ostateczne rozwiązanie?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Proszę po prostu dodać poprawny zwrot do odpowiednich przypadków. 
+        </p>
+        <p>Oto całe rozwiązanie:</p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+
+    if not num % 15:
+        return "Fizz Buzz"
+    elif not num % 5:
+        return "Buzz"
+    elif not num % 3:
+        return "Fizz"
+    else:  
+        return str(num)
+        </pre>
+        </div>
+        <p>
+            Przy okazji, jeśli Państwa przypadki warunku kończą się instrukcją <b class="code">return</b>, zazwyczaj nie potrzebują Państwo <b class="code">elif</b> i <b class="code">else</b> - wystarczy <b class="code">if</b>:
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+
+    if not num % 15:
+        return "Fizz Buzz"
+    if not num % 5:
+        return "Buzz"
+    if not num % 3:
+        return "Fizz"
+    return str(num)
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Proszę pokazać mi więcej rozwiązań!<br />
+        bo chcę być prawdziwym 🥇 Python Ninnjaa!</p>
+    </div>
+    <div class="answer">
+        <p>Jasne, proszę łapać!</p>
+        <p>
+            Ostateczna odpowiedź jest zbudowana z części: jeśli ciąg zostanie pomnożony przez <b class="code">0</b>, stanie się pustym ciągiem <b class="code">""</b>.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(n: int) -> str:
+
+    return 'Fizz'*(not n%3)+' '*(not n%15)+'Buzz'*(not n%5) or str(n)
+        </pre>
+        </div>
+        <p>
+            W tym rozwiązaniu unikamy dzielenia przez <b class="code">15</b>, ale w przypadku, gdy <b class="code">num</b> jest podzielny zarówno przez <b class="code">5</b>, jak i <b class="code">3</b>, oznacza to, że jest on również podzielny przez <b class="code">15</b>. Tak więc oba ciągi są obecne na liście.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+    
+    res = []
+    if not num % 3:
+        res.append('Fizz')
+    if not num % 5:
+        res.append('Buzz')
+    res = ' '.join(res) or str(num)
+
+    return res
+        </pre>
+        </div>
+        <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Dzięki! Teraz wiem i rozumiem więcej! Wszystko działa poprawnie!</p>
+    </div>
+    <div class="answer">
+        miło mi to słyszeć!
+    </div>
+</div>
+</body>

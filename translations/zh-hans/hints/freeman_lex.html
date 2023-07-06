@@ -1,0 +1,143 @@
+<body data-author="freeman_lex" data-difficulty="easy">
+<div class="question-answer">
+    <div class="question">
+        <p>我不知道如何开始解决这个任务。</p>
+    </div>
+    <div class="answer">
+        <p>
+            💡 让我们从上一个任务的提示中继续解决 --<a target="_blank" href="https://py.checkio.org/en/mission/just-fizz/">Just Fizz!</a>
+           <pre class="brush: python">
+def checkio(num: int) -> str: 
+
+    if not num % 3:
+        return "Fizz"
+    else:
+        return str(num)
+            </pre>
+           <p> 
+                在这个任务中，你只需要添加更多的条件检查的变体和各自的返回。
+           </p>
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>好吧，怎么做呢？</p>
+    </div>
+    <div class="answer">
+        <p>
+            你应该从具体到一般地检查可除性。因为，较少的数字能被<b class="code">15</b> ，然后被<b class="code">5</b> 或<b class="code">3</b> ，这种情况比较特殊，所以应该先检查。<b class="code">5</b> 不能被<b class="code">3</b> 均匀分割，所以进一步的顺序并不重要。
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我需要一个小提示!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            使用相同的工具--modulo (<b class="code">%</b>)运算符和<b class="code">if-elif-else</b> 语句--来检查除法的不同情况。
+        </p>
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+
+    if not num % 15:
+        ...
+    elif not num % 5:
+        ...
+    elif not num % 3:
+        return "Fizz"
+    else:  
+        return str(num)
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>那么，我的最终解决方案应该是什么样子的呢？</p>
+    </div>
+    <div class="answer">
+        <p>
+            只要在各自的情况下加上正确的回车即可。 
+        </p>
+        <p>以下是整个解决方案：</p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+
+    if not num % 15:
+        return "Fizz Buzz"
+    elif not num % 5:
+        return "Buzz"
+    elif not num % 3:
+        return "Fizz"
+    else:  
+        return str(num)
+        </pre>
+        </div>
+        <p>
+            顺便说一下，如果你的条件案例以<b class="code">return</b> 语句结束，你通常不需要<b class="code">elif</b> 和<b class="code">else</b> -<b class="code">if</b> 就够了：
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+
+    if not num % 15:
+        return "Fizz Buzz"
+    if not num % 5:
+        return "Buzz"
+    if not num % 3:
+        return "Fizz"
+    return str(num)
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>告诉我更多的解决方案!<br />
+        因为我想成为一个真正的🥇 Python Ninnjaa!</p>
+    </div>
+    <div class="answer">
+        <p>当然，抓住它!</p>
+        <p>
+            最后的答案是由部分组成的：如果字符串乘以<b class="code">0</b> ，就会变成一个空字符串<b class="code">""</b> 。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(n: int) -> str:
+
+    return 'Fizz'*(not n%3)+' '*(not n%15)+'Buzz'*(not n%5) or str(n)
+        </pre>
+        </div>
+        <p>
+            在这个解决方案中，可以避免除以<b class="code">15</b> ，但是如果<b class="code">num</b> 同时被<b class="code">5</b> 和<b class="code">3</b> 匀称地除以，这意味着它也可以被<b class="code">15</b> 匀称地除以。所以这两个字符串都出现在列表中。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(num: int) -> str:
+    
+    res = []
+    if not num % 3:
+        res.append('Fizz')
+    if not num % 5:
+        res.append('Buzz')
+    res = ' '.join(res) or str(num)
+
+    return res
+        </pre>
+        </div>
+        <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>谢谢!我现在知道并理解了更多!一切运作正常!</p>
+    </div>
+    <div class="answer">
+        👍很高兴听到这个消息!
+    </div>
+</div>
+</body>

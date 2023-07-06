@@ -1,40 +1,40 @@
 <img class="for_info_only half" title="juggler" src="{{MEDIA}}calculator.png" alt="juggler" style="float: left" />
 
 <p>
-    "Fizz buzz" 是一个单词游戏，我们将教会机器人学会关于除法的一些知识。
+    "Fizz buzz "是一个文字游戏，我们将用它来教机器人认识除法。让我们来学习计算机。
 </p>
 
 <p>
-    你将要使用python写一个方法，方法接收一个整数，然后返回：<br>
-    <strong>"Fizz Buzz"</strong> 如果这个整数可以整除3并且可以整除5；<br>
-    <strong>"Fizz"</strong> 如果整个整数可以整除3；<br>
-    <strong>"Buzz"</strong> 如果这个整数可以整除5；<br>
-    其他情况则返回<strong>传入的这个整数</strong>；<br>
+    你应该写一个函数，接收一个正整数并返回：<br>
+    如果该数字能被3和5整除，则返回<strong>"Fizz Buzz</strong>"；<br>
+    如果数字能被3整除，则为 "<strong>Fizz"；</strong><br>
+    如果数字能被5整除，则为 "<strong>Buzz</strong>"；<br>
+    其他情况下，将<strong>数字</strong>作为字符串。<br>
 </p>
 
 <p>
-    <strong>输入: </strong> 一个整数值。 
+   <strong>输入：</strong>一个{% if is_js %}整数<span>(number)</span>{% else %} 整数<span>(int)</span>{% endif %} 。
 </p>
 
 <p>
-    <strong>输出: </strong> 一个字符串类型的答案。 
+   <strong>输出：</strong>一个{% if is_js %}字符串<span>(string)</span>{% else %} 字符串<span>(str)</span>{% endif %} 。
 </p>
 
 
 <div class="for_info_only">
     <p>
-        <strong>举个栗子:</strong>
+        <strong>例子：</strong>
     </p>
     <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 <p class="for_info_only">
-    <strong>你将学到什么: </strong>
-    这个任务可以让你学会写一个十分简单的方法，并学会使用if-else 语句。
+   <strong>它是如何使用的： </strong>
+    在这里你可以学习如何编写最简单的函数，以及如何使用if-else语句。
 </p>
 
 
 <p>
-    <strong>Precondition:</strong>
-    0 &lt; number &le; 1000
+   <strong>前提条件：</strong>
+    0 &lt; 数字&le;1000
 </p>

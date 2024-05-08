@@ -38,20 +38,8 @@ def checkio(num: int) -> str:
     </div>
     <div class="answer">
         <p>
-            Verwenden Sie dieselben Instrumente - den Modulo-Operator (<b class="code">%</b>) und die Anweisung <b class="code">if-elif-else</b> - um verschiedene Fälle von Division zu prüfen.
+            Verwenden Sie dieselben Instrumente - den Operator modulo (<b class="code">%</b>) und die Anweisung <b class="code">if-elif-else</b> -, um verschiedene Fälle von Divisionen zu prüfen und den richtigen Rückgabesatz zu den jeweiligen Fällen hinzuzufügen.
         </p>
-        <pre class="brush: python">
-def checkio(num: int) -> str:
-
-    if not num % 15:
-        ...
-    elif not num % 5:
-        ...
-    elif not num % 3:
-        return "Fizz"
-    else:  
-        return str(num)
-        </pre>
     </div>
 </div>
 <div class="question-answer">
@@ -59,9 +47,6 @@ def checkio(num: int) -> str:
         <p>Wie sollte also meine endgültige Lösung aussehen?</p>
     </div>
     <div class="answer">
-        <p>
-            Fügen Sie einfach die korrekte Rückgabe zu den jeweiligen Fällen hinzu. 
-        </p>
         <p>Hier ist die gesamte Lösung:</p>
         <div class="spoiler">
         <pre class="brush: python">
@@ -77,22 +62,6 @@ def checkio(num: int) -> str:
         return str(num)
         </pre>
         </div>
-        <p>
-            Übrigens, wenn Ihre Bedingungsfälle mit der Anweisung <b class="code">return</b> enden, brauchen Sie normalerweise <b class="code">elif</b> und <b class="code">else</b> nicht - <b class="code">if</b> reicht aus:
-        </p>
-        <div class="spoiler">
-        <pre class="brush: python">
-def checkio(num: int) -> str:
-
-    if not num % 15:
-        return "Fizz Buzz"
-    if not num % 5:
-        return "Buzz"
-    if not num % 3:
-        return "Fizz"
-    return str(num)
-        </pre>
-        </div>
     </div>
 </div>
 <div class="question-answer">
@@ -101,7 +70,7 @@ def checkio(num: int) -> str:
         denn ich will ein echter 🥇 Python Ninnjaa sein!</p>
     </div>
     <div class="answer">
-        <p>Klar, schnapp sie dir!</p>
+        <p>Klar, greifen Sie zu!</p>
         <p>
             Die endgültige Antwort ist aus Teilen aufgebaut: Wenn die Zeichenkette mit <b class="code">0</b> multipliziert wird, wird sie zu einer leeren Zeichenkette <b class="code">""</b>.
         </p>

@@ -14,7 +14,7 @@ def checkio(num: int) -> str:
     else:
         return str(num)
             </pre>
-           <p> 
+           <p>
                 Dans cette mission, il vous suffit d'ajouter d'autres variantes de vérification des conditions et de retour respectif.
            </p>
         </p>
@@ -38,20 +38,8 @@ def checkio(num: int) -> str:
     </div>
     <div class="answer">
         <p>
-            Utilisez les mêmes instruments - l'opérateur modulo (<b class="code">%</b>) et l'instruction <b class="code">if-elif-else</b> - pour vérifier différents cas de division.
+            Utilisez les mêmes instruments - l'opérateur modulo (<b class="code">%</b>) et l'instruction <b class="code">if-elif-else</b> - pour vérifier différents cas de division et ajoutez la phrase de retour correcte dans les cas respectifs.
         </p>
-        <pre class="brush: python">
-def checkio(num: int) -> str:
-
-    if not num % 15:
-        ...
-    elif not num % 5:
-        ...
-    elif not num % 3:
-        return "Fizz"
-    else:  
-        return str(num)
-        </pre>
     </div>
 </div>
 <div class="question-answer">
@@ -59,9 +47,6 @@ def checkio(num: int) -> str:
         <p>Alors, à quoi devrait ressembler ma solution finale?</p>
     </div>
     <div class="answer">
-        <p>
-            Il suffit d'ajouter le retour correct aux cas respectifs. 
-        </p>
         <p>Voici la solution complète:</p>
         <div class="spoiler">
         <pre class="brush: python">
@@ -75,22 +60,6 @@ def checkio(num: int) -> str:
         return "Fizz"
     else:  
         return str(num)
-        </pre>
-        </div>
-        <p>
-            Par ailleurs, si vos cas de condition se terminent par l'énoncé <b class="code">return</b>, vous n'avez généralement pas besoin de <b class="code">elif</b> et <b class="code">else</b> - <b class="code">if</b> suffit:
-        </p>
-        <div class="spoiler">
-        <pre class="brush: python">
-def checkio(num: int) -> str:
-
-    if not num % 15:
-        return "Fizz Buzz"
-    if not num % 5:
-        return "Buzz"
-    if not num % 3:
-        return "Fizz"
-    return str(num)
         </pre>
         </div>
     </div>
@@ -129,7 +98,7 @@ def checkio(num: int) -> str:
     return res
         </pre>
         </div>
-        <p><b>Cliquez sur "Best solutions" dans le menu de la mission et découvrez de nombreuses autres solutions intéressantes!</b></p>
+        <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
     </div>
 </div>
 <div class="question-answer">

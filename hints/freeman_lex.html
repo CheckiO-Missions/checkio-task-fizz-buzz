@@ -38,20 +38,8 @@ def checkio(num: int) -> str:
     </div>
     <div class="answer">
         <p>
-            Use the same instruments - modulo (<b class="code">%</b>) operator and <b class="code">if-elif-else</b> statement - to check different cases of division.
+            Use the same instruments - modulo (<b class="code">%</b>) operator and <b class="code">if-elif-else</b> statement - to check different cases of division and add correct return phrase to respective cases.
         </p>
-        <pre class="brush: python">
-def checkio(num: int) -> str:
-
-    if not num % 15:
-        ...
-    elif not num % 5:
-        ...
-    elif not num % 3:
-        return "Fizz"
-    else:  
-        return str(num)
-        </pre>
     </div>
 </div>
 <div class="question-answer">
@@ -59,9 +47,6 @@ def checkio(num: int) -> str:
         <p>So, how my final solution should look like?</p>
     </div>
     <div class="answer">
-        <p>
-            Just add correct return to respective cases. 
-        </p>
         <p>Here is the whole solution:</p>
         <div class="spoiler">
         <pre class="brush: python">
@@ -75,22 +60,6 @@ def checkio(num: int) -> str:
         return "Fizz"
     else:  
         return str(num)
-        </pre>
-        </div>
-        <p>
-            By the way, if your condition cases end with <b class="code">return</b> statement, you usually do not need <b class="code">elif</b> and <b class="code">else</b> - <b class="code">if</b> is enough:
-        </p>
-        <div class="spoiler">
-        <pre class="brush: python">
-def checkio(num: int) -> str:
-
-    if not num % 15:
-        return "Fizz Buzz"
-    if not num % 5:
-        return "Buzz"
-    if not num % 3:
-        return "Fizz"
-    return str(num)
         </pre>
         </div>
     </div>
